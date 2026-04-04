@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --font-barlow: var(--next-font-barlow), sans-serif;
+  --font-fraunces: var(--next-font-fraunces), serif;
+}
+
+@layer base {
+  html {
+    /* font-family: var(--font-name); */
+    scroll-behavior: smooth;
+  }
+}
+
+/* primary colors */
+@theme {
+  --color-red-400: hsl(7, 99%, 70%);
+  --color-yellow-500: hsl(51, 100%, 49%);
+  --color-green-500: hsl(167, 40%, 67%);
+  --color-green-800: hsl(177, 40%, 30%);
+  --color-blue-800: hsl(198, 62%, 26%);
+}
+
+/* neutral colors */
+@theme {
+  --color-white: hsl(0, 100%, 100%);
+  --color-gray-400: hsl(210, 4%, 67%);
+  --color-gray-550: hsl(232, 10%, 55%);
+  --color-gray-600: hsl(213, 9%, 39%);
+  --color-gray-950: hsl(212, 27%, 19%);
+}
+
+/* font size */
+@theme {
+  --font-size-copy: 18px;
+}
