@@ -1,5 +1,6 @@
 import { content } from "@/data/content";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   image: string;
@@ -54,9 +55,12 @@ function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div className="gap-7 sm:gap-15 flex flex-col justify-center items-center">
-      <img
+      <Image
         src={`/images/${image}`}
         alt={name}
+        width={1000}
+        height={1000}
+        loading="eager"
         className="rounded-full w-20 h-20 object-cover"
       />
       <p className="text-center text-gray-600 font-barlow font-medium text-base/8">

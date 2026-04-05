@@ -1,5 +1,6 @@
 "use client";
 import { useResponsive } from "@/hooks/useResponsive";
+import { content } from "@/data/content";
 
 const bgImage = "image-header.jpg";
 
@@ -16,8 +17,8 @@ export default function HeroContainer({
       }
       style={{
         backgroundImage: `url(${useResponsive<string>([
-          `/images/mobile/${bgImage}`,
-          `/images/desktop/${bgImage}`,
+          `/images/${content.hero.bg.mobile}`,
+          `/images/${content.hero.bg.desktop}`,
         ])})`,
       }}
     >

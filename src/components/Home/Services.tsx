@@ -13,7 +13,7 @@ interface ServiceCardProps {
 export default function Services() {
   const t = useTranslations("services");
   const data = content.services;
-  
+
   return (
     <div
       id="services"
@@ -50,7 +50,7 @@ function ServiceCard({
     "blue-800": "var(--color-blue-800)",
   };
   const textColor = colorMap[color] || "text-black";
-  const imgSrc = `/images/desktop/${image}`;
+  const imgSrc = `/images/${image}`;
   const saturateFilter = `saturate(${saturate})`;
 
   const containerClasses = cn(

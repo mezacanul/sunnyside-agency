@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import HeroContainer from "./HeroContainer";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const arrowDownImage = `/images/icon-arrow-down.svg`;
 
@@ -28,10 +29,13 @@ export default function Hero() {
         <h1 className={classNames.textSection.h1}>
           {t("title")}
         </h1>
-        <img
-          className="h-[8rem]"
+        <Image
           src={arrowDownImage}
           alt="arrow down"
+          width={1000}
+          height={1000}
+          loading="eager"
+          className="h-[8rem]"
         />
       </div>
     </HeroContainer>

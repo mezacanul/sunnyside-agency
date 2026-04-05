@@ -1,6 +1,7 @@
 import { cn } from "@/utils/cn";
 import { useTranslations } from "next-intl";
 import { content } from "@/data/content";
+import Image from "next/image";
 
 interface TextSectionProps {
   title: string;
@@ -24,10 +25,7 @@ export default function About() {
     },
   };
   return (
-    <div
-      id="about"
-      className="sm:h-screen flex flex-col"
-    >
+    <div id="about" className="sm:h-screen flex flex-col">
       <div className={classNames.sections.upper}>
         <TextSection
           title={t("transform.title")}
@@ -35,17 +33,25 @@ export default function About() {
           color="red"
           button={t("transform.button")}
         />
-        <img
+        <Image
           className="w-full object-cover h-[50vh]"
-          src={`/images/desktop/${data[0].image}`}
+          src={`/images/${data[0].image}`}
           style={{ filter: "brightness(1.2)" }}
+          alt={data[0].image}
+          width={1000}
+          height={1000}
+          loading="eager"
         />
       </div>
 
       <div className={classNames.sections.lower}>
-        <img
+        <Image
           className="w-full object-cover h-[50vh]"
-          src={`/images/desktop/${data[1].image}`}
+          src={`/images/${data[1].image}`}
+          alt={data[1].image}
+          width={1000}
+          height={1000}
+          loading="eager"
         />
         <TextSection
           title={t("stand-out.title")}

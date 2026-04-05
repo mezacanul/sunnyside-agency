@@ -1,4 +1,10 @@
 export const content = {
+  hero: {
+    bg: {
+      mobile: "mobile-image-header.jpg",
+      desktop: "desktop-image-header.jpg",
+    },
+  },
   nav: {
     links: [
       { id: "about", href: "#about" },
