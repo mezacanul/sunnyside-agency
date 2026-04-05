@@ -10,7 +10,7 @@ export default function HeroContainer({
 }) {
   return (
     <div
-      id="hero-section"
+      id="hero"
       className={
         "bg-cover bg-center h-screen flex items-center justify-center"
       }

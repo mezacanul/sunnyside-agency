@@ -16,7 +16,7 @@ export default function Services() {
   
   return (
     <div
-      id="services-section"
+      id="services"
       className="sm:h-[65vh] sm:grid sm:grid-cols-2 flex flex-col"
     >
       <ServiceCard

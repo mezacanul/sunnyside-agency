@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import type { Config } from "@/types";
 import { useTranslations } from "next-intl";
 import { content } from "@/data/content";
+import LangSwitcher from "./LangSwitcher";
 
 export default function Header() {
   const classNames = {
@@ -130,6 +131,7 @@ function Nav({ toggleMenu }: { toggleMenu?: () => void }) {
           {t(link.id)}
         </NavLink>
       ))}
+      <LangSwitcher />
       <button
         className={cn(
           "text-gray-600 font-medium text-xl sm:font-normal sm:text-white sm:text-lg",

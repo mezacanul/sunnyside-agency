@@ -18,7 +18,7 @@ export default function Hero() {
         "text-4xl font-black tracking-[0.7rem]",
         "sm:text-7xl sm:font-bold sm:tracking-[1.3rem]",
         // shared
-        "text-white text-center font-fraunces"
+        "text-white text-center font-fraunces w-[90%] text-center"
       ),
     },
   };

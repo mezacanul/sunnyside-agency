@@ -25,7 +25,7 @@ export default function About() {
   };
   return (
     <div
-      id="about-section"
+      id="about"
       className="sm:h-screen flex flex-col"
     >
       <div className={classNames.sections.upper}>

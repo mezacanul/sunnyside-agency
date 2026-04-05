@@ -14,7 +14,7 @@ export default function Testimonials() {
 
   return (
     <div
-      id="testimonials-section"
+      id="testimonials"
       className="py-20 sm:py-0 sm:h-screen flex justify-center items-center"
     >
       <div className="w-[80%] sm:w-[70%] flex flex-col justify-center items-center gap-15">
