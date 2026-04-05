@@ -35,7 +35,7 @@ export default function Hero() {
           width={1000}
           height={1000}
           loading="eager"
-          className="h-[8rem]"
+          className="h-[8rem] w-auto"
         />
       </div>
     </HeroContainer>
