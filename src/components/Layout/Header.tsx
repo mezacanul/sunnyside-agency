@@ -7,6 +7,7 @@ import {
   AiOutlineMenu,
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import type { Config } from "@/types";
 
 export default function Header() {
   const classNames = {
@@ -26,12 +27,6 @@ export default function Header() {
     </header>
   );
 }
-
-type Config = {
-  height: "h-0" | "h-100";
-  opacity: "opacity-0" | "opacity-100";
-  display: "absolute" | "hidden";
-};
 
 function MobileNav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
