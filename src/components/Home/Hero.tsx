@@ -1,9 +1,12 @@
 import { cn } from "@/utils/cn";
 import HeroContainer from "./HeroContainer";
+import { useTranslations } from "next-intl";
 
 const arrowDownImage = `/images/icon-arrow-down.svg`;
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   const classNames = {
     textSection: {
       container: cn(
@@ -23,7 +26,7 @@ export default function Hero() {
     <HeroContainer>
       <div className={classNames.textSection.container}>
         <h1 className={classNames.textSection.h1}>
-          {"WE ARE CREATIVES"}
+          {t("title")}
         </h1>
         <img
           className="h-[8rem]"

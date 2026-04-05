@@ -1,4 +1,6 @@
+import { content } from "@/data/content";
 import { cn } from "@/utils/cn";
+import { useTranslations } from "next-intl";
 
 interface ServiceCardProps {
   title: string;
@@ -9,23 +11,26 @@ interface ServiceCardProps {
 }
 
 export default function Services() {
+  const t = useTranslations("services");
+  const data = content.services;
+  
   return (
     <div
       id="services-section"
       className="sm:h-[65vh] sm:grid sm:grid-cols-2 flex flex-col"
     >
       <ServiceCard
-        title="Graphic Design"
-        description="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention."
+        title={t("graphic-design.title")}
+        description={t("graphic-design.description")}
         color="green-800"
-        image="image-graphic-design.jpg"
+        image={data[0].image}
         saturate={1.2}
       />
       <ServiceCard
-        title="Photography"
-        description="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."
+        title={t("photography.title")}
+        description={t("photography.description")}
         color="blue-800"
-        image="image-photography.jpg"
+        image={data[1].image}
         saturate={1.5}
       />
     </div>

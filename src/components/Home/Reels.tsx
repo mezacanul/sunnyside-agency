@@ -1,11 +1,7 @@
-const reels = [
-  "image-gallery-milkbottles.jpg",
-  "image-gallery-orange.jpg",
-  "image-gallery-cone.jpg",
-  "image-gallery-sugarcubes.jpg",
-];
+import { content } from "@/data/content";
 
 export default function Reels() {
+  const { reels } = content;
   return (
     <div className="h-[50vh] grid sm:grid-cols-4 grid-cols-2">
       {reels.map((reel) => (

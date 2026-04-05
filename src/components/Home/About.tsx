@@ -1,13 +1,19 @@
 import { cn } from "@/utils/cn";
+import { useTranslations } from "next-intl";
+import { content } from "@/data/content";
 
 interface TextSectionProps {
   title: string;
   description: string;
   color: string;
+  button: string;
 }
 
 export default function About() {
-  const { textSections, imageSections } = content;
+  // const { textSections, imageSections } = content;
+  const t = useTranslations("about");
+  const data = content.about;
+
   const classNames = {
     sections: {
       upper: cn(
@@ -24,25 +30,28 @@ export default function About() {
     >
       <div className={classNames.sections.upper}>
         <TextSection
-          title={textSections[0].title}
-          description={textSections[0].description}
+          title={t("transform.title")}
+          description={t("transform.description")}
           color="red"
+          button={t("transform.button")}
         />
         <img
           className="w-full object-cover h-[50vh]"
-          src={`/images/desktop/${imageSections[0]}`}
+          src={`/images/desktop/${data[0].image}`}
           style={{ filter: "brightness(1.2)" }}
         />
       </div>
+
       <div className={classNames.sections.lower}>
         <img
           className="w-full object-cover h-[50vh]"
-          src={`/images/desktop/${imageSections[1]}`}
+          src={`/images/desktop/${data[1].image}`}
         />
         <TextSection
-          title={textSections[1].title}
-          description={textSections[1].description}
+          title={t("stand-out.title")}
+          description={t("stand-out.description")}
           color="yellow"
+          button={t("stand-out.button")}
         />
       </div>
     </div>
@@ -53,6 +62,7 @@ function TextSection({
   title,
   description,
   color,
+  button,
 }: TextSectionProps) {
   const colors: Record<string, string> = {
     red: "after:bg-red-400/40 hover:after:bg-red-400",
@@ -74,29 +84,10 @@ function TextSection({
             href="#"
             className={`font-fraunces w-fit ${afterClasses} font-bold text-sm text-gray-950`}
           >
-            LEARN MORE
+            {button}
           </a>
         </div>
       </div>
     </div>
   );
 }
-
-const content = {
-  textSections: [
-    {
-      title: "Transform your brand",
-      description:
-        "We are a full-service creative agency that specializes in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
-    },
-    {
-      title: "Stand out to the right audience",
-      description:
-        "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.",
-    },
-  ],
-  imageSections: [
-    "image-transform.jpg",
-    "image-stand-out.jpg",
-  ],
-};

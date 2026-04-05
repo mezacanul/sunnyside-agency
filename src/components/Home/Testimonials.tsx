@@ -1,3 +1,6 @@
+import { content } from "@/data/content";
+import { useTranslations } from "next-intl";
+
 interface TestimonialCardProps {
   image: string;
   description: string;
@@ -6,6 +9,9 @@ interface TestimonialCardProps {
 }
 
 export default function Testimonials() {
+  const t = useTranslations("testimonials");
+  const data = content.testimonials;
+
   return (
     <div
       id="testimonials-section"
@@ -13,26 +19,26 @@ export default function Testimonials() {
     >
       <div className="w-[80%] sm:w-[70%] flex flex-col justify-center items-center gap-15">
         <h2 className="sm:text-2xl text-lg text-gray-550 font-fraunces font-bold text-center tracking-[0.5rem]">
-          {"CLIENT TESTIMONIALS"}
+          {t("title")}
         </h2>
         <div className="flex flex-col gap-15 sm:grid sm:grid-cols-3 sm:gap-10">
           <TestimonialCard
-            image="image-emily.jpg"
-            description="We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit."
-            name="Emily R."
-            position="Marketing Director"
+            image={data[0].image}
+            description={t("people.emily.description")}
+            name={t("people.emily.name")}
+            position={t("people.emily.position")}
           />
           <TestimonialCard
-            image="image-thomas.jpg"
-            description="Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience."
-            name="Thomas S."
-            position="Chief Operating Officer"
+            image={data[1].image}
+            description={t("people.thomas.description")}
+            name={t("people.thomas.name")}
+            position={t("people.thomas.position")}
           />
           <TestimonialCard
-            image="image-jennie.jpg"
-            description="Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!"
-            name="Jennie F."
-            position="Business Owner"
+            image={data[2].image}
+            description={t("people.jennie.description")}
+            name={t("people.jennie.name")}
+            position={t("people.jennie.position")}
           />
         </div>
       </div>
