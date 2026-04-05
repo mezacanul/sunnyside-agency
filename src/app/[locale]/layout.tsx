@@ -1,8 +1,15 @@
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import {
+  getMessages,
+  setRequestLocale,
+} from "next-intl/server";
 import { Barlow, Fraunces } from "next/font/google";
 import "@/app/globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
+import { routing } from "@/i18n/routing";
+import { NextIntlClientProvider } from "next-intl";
 
 const barlow = Barlow({
   subsets: ["latin"],
@@ -37,26 +44,42 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Next Template",
+  title: "Sunnyside",
   description:
-    "A template for a Next.js project with Tailwind CSS, TypeScript and the App Router",
+    "Sunnyside is a creative agency that specializes in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
+  // Validate the locale
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  // This is important for static rendering & caching
+  setRequestLocale(locale);
+
+  const messages = await getMessages();
+
   return (
     <html
       lang="en"
       className={`${barlow.variable} ${fraunces.variable} h-full antialiased`}
     >
-      <body className="relative overflow-x-hidden">
-        <Header />
-        <main className="relative">{children}</main>
-        <Footer />
-      </body>
+      <NextIntlClientProvider messages={messages}>
+        <body className="relative overflow-x-hidden">
+          <Header />
+          <main className="relative">{children}</main>
+          <Footer />
+        </body>
+      </NextIntlClientProvider>
       {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
