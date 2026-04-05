@@ -1,0 +1,78 @@
+{
+  "logo": "sunnyside",
+  "nav": {
+    "links": [
+      { "title": "About", "href": "#about" },
+      { "title": "Services", "href": "#services" },
+      {
+        "title": "Projects",
+        "href": "#testimonials"
+      }
+    ],
+    "contact": "CONTACT"
+  },
+  "socials": [
+    { "title": "Facebook", "href": "#" },
+    { "title": "Instagram", "href": "#" },
+    { "title": "Twitter", "href": "#" },
+    { "title": "Pinterest", "href": "#" }
+  ],
+  "hero": {
+    "title": "WE ARE CREATIVES"
+  },
+  "about": [
+    {
+      "title": "Transform your brand",
+      "description": "We are a full-service creative agency that specializes in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.",
+      "button": "LEARN MORE",
+      "image": "image-transform.jpg"
+    },
+    {
+      "title": "Stand out to the right audience",
+      "description": "Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.",
+      "button": "LEARN MORE",
+      "image": "image-stand-out.jpg"
+    }
+  ],
+  "services": [
+    {
+      "title": "Graphic Design",
+      "description": "Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.",
+      "image": "image-graphic-design.jpg"
+    },
+    {
+      "title": "Photography",
+      "description": "Increase your credibility by getting the most stunning, high-quality photos that improve your business image.",
+      "image": "image-photography.jpg"
+    }
+  ],
+  "testimonials": {
+    "title": "CLIENT TESTIMONIALS",
+    "items": [
+      {
+        "image": "image-emily.jpg",
+        "description": "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
+        "name": "Emily R.",
+        "position": "Marketing Director"
+      },
+      {
+        "image": "image-thomas.jpg",
+        "description": "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
+        "name": "Thomas S.",
+        "position": "Chief Operating Officer"
+      },
+      {
+        "image": "image-jennie.jpg",
+        "description": "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
+        "name": "Jennie F.",
+        "position": "Business Owner"
+      }
+    ]
+  },
+  "reels": [
+    "image-gallery-milkbottles.jpg",
+    "image-gallery-orange.jpg",
+    "image-gallery-cone.jpg",
+    "image-gallery-sugarcubes.jpg"
+  ]
+}
