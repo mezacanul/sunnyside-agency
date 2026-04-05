@@ -5,6 +5,8 @@ import {
 import Logo from "@/components/common/Logo";
 import { IoLogoInstagram } from "react-icons/io";
 import { AiFillPinterest } from "react-icons/ai";
+import { content } from "@/data/content";
+import { useTranslations } from "next-intl";
 
 interface FooterLinkProps {
   href: string;
@@ -28,17 +30,17 @@ export default function Footer() {
 }
 
 function FooterNav() {
+  const t = useTranslations("main.nav.links");
+  const navLinks = content.nav.links;
   return (
     <nav className="flex items-center gap-20 text-green-800 font-barlow font-medium">
-      <FooterLink href="#about-section" title="About" />
-      <FooterLink
-        href="#services-section"
-        title="Services"
-      />
-      <FooterLink
-        href="#testimonials-section"
-        title="Projects"
-      />
+      {navLinks.map((link: any) => (
+        <FooterLink
+          key={link.href}
+          href={link.href}
+          title={t(link.id)}
+        />
+      ))}
     </nav>
   );
 }

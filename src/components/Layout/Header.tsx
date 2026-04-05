@@ -8,6 +8,8 @@ import {
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
 import type { Config } from "@/types";
+import { useTranslations } from "next-intl";
+import { content } from "@/data/content";
 
 export default function Header() {
   const classNames = {
@@ -114,27 +116,29 @@ function MobileMenu({
 }
 
 function Nav({ toggleMenu }: { toggleMenu?: () => void }) {
-  const navLinks = [
-    { href: "#about-section", children: "About" },
-    { href: "#services-section", children: "Services" },
-    {
-      href: "#testimonials-section",
-      children: "Projects",
-    },
-    { href: "#footer", children: "CONTACT" },
-  ];
+  const t = useTranslations("main.nav.links");
+  const navLinks = content.nav.links;
 
   return (
     <nav className="flex flex-col sm:flex-row items-center gap-8">
-      {navLinks.map((link) => (
+      {navLinks.map((link: any) => (
         <NavLink
           key={link.href}
           href={link.href}
           toggleMenu={toggleMenu ?? (() => {})}
         >
-          {link.children}
+          {t(link.id)}
         </NavLink>
       ))}
+      <button
+        className={cn(
+          "text-gray-600 font-medium text-xl sm:font-normal sm:text-white sm:text-lg",
+          "font-barlow transition-colors duration-300 cursor-pointer",
+          "bg-yellow-500 sm:bg-white hover:bg-white/30 text-black! hover:text-white! font-fraunces text-base! font-bold! rounded-full px-6 py-2"
+        )}
+      >
+        {t("contact")}
+      </button>
     </nav>
   );
 }
@@ -148,13 +152,9 @@ function NavLink({
   children: React.ReactNode;
   toggleMenu: () => void;
 }) {
-  const isContact =
-    children === "CONTACT"
-      ? "bg-yellow-500 sm:bg-white hover:bg-white/30 text-black! hover:text-white! font-fraunces text-base! font-bold! rounded-full px-6 py-2"
-      : "";
   const classNames = cn(
     "text-gray-600 font-medium text-xl sm:font-normal sm:text-white sm:text-lg",
-    `hover:text-blue-800 font-barlow transition-colors duration-300 ${isContact}`
+    `hover:text-blue-800 font-barlow transition-colors duration-300`
   );
 
   return (

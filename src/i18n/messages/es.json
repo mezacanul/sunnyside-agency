@@ -1,78 +1,58 @@
 {
-  "logo": "sunnyside",
-  "nav": {
-    "links": [
-      { "title": "Acerca de", "href": "#about" },
-      { "title": "Servicios", "href": "#services" },
-      {
-        "title": "Proyectos",
-        "href": "#testimonials"
+  "main": {
+    "logo": "sunnyside",
+    "nav": {
+      "links": {
+        "about": "Acerca de",
+        "services": "Servicios",
+        "projects": "Proyectos",
+        "contact": "Contacto"
       }
-    ],
-    "contact": "CONTACTO"
+    }
   },
-  "socials": [
-    { "title": "Facebook", "href": "#" },
-    { "title": "Instagram", "href": "#" },
-    { "title": "Twitter", "href": "#" },
-    { "title": "Pinterest", "href": "#" }
-  ],
   "hero": {
     "title": "SOMOS CREATIVOS"
   },
-  "about": [
-    {
+  "about": {
+    "transform": {
       "title": "Transforma tu marca",
       "description": "Somos una agencia creativa integral que se especializa en ayudar a las marcas a crecer rápido. Atrae a tus clientes a través de visuales atractivos que hacen la mayor parte del marketing por ti.",
-      "button": "MÁS INFORMACIÓN",
-      "image": "image-transform.jpg"
+      "button": "MÁS INFORMACIÓN"
     },
-    {
+    "stand-out": {
       "title": "Destaca ante el público adecuado",
       "description": "Usando una fórmula colaborativa de diseñadores, investigadores, fotógrafos, videógrafos y redactores, construiremos y expandiremos tu marca en los espacios digitales.",
-      "button": "MÁS INFORMACIÓN",
-      "image": "image-stand-out.jpg"
+      "button": "MÁS INFORMACIÓN"
     }
-  ],
-  "services": [
-    {
+  },
+  "services": {
+    "graphic-design": {
       "title": "Diseño Gráfico",
-      "description": "Un gran diseño te hace memorable. Entregamos piezas que refuerzan el mensaje de tu marca y captan la atención de clientes potenciales.",
-      "image": "image-graphic-design.jpg"
+      "description": "Un gran diseño te hace memorable. Entregamos piezas que refuerzan el mensaje de tu marca y captan la atención de clientes potenciales."
     },
-    {
+    "photography": {
       "title": "Fotografía",
-      "description": "Incrementa tu credibilidad obteniendo las fotos más sorprendentes y de alta calidad que mejoran la imagen de tu negocio.",
-      "image": "image-photography.jpg"
+      "description": "Incrementa tu credibilidad obteniendo las fotos más sorprendentes y de alta calidad que mejoran la imagen de tu negocio."
     }
-  ],
+  },
   "testimonials": {
     "title": "TESTIMONIOS DE CLIENTES",
-    "items": [
-      {
-        "image": "image-emily.jpg",
+    "items": {
+      "emily": {
         "description": "Confiamos en Sunnyside y cumplieron, asegurándose de que nuestras necesidades se cumplieran y los plazos siempre se respetaran.",
         "name": "Emily R.",
         "position": "Directora de Marketing"
       },
-      {
-        "image": "image-thomas.jpg",
+      "thomas": {
         "description": "El entusiasmo de Sunnyside, junto con su gran interés en el éxito de nuestra marca, hicieron que fuera una experiencia satisfactoria y agradable.",
         "name": "Thomas S.",
         "position": "Director de Operaciones"
       },
-      {
-        "image": "image-jennie.jpg",
+      "jennie": {
         "description": "¡Resultado final increíble! Nuestras ventas aumentaron más del 400% cuando trabajamos con Sunnyside. ¡Muy recomendable!",
         "name": "Jennie F.",
         "position": "Propietaria de Negocio"
       }
-    ]
-  },
-  "reels": [
-    "image-gallery-milkbottles.jpg",
-    "image-gallery-orange.jpg",
-    "image-gallery-cone.jpg",
-    "image-gallery-sugarcubes.jpg"
-  ]
+    }
+  }
 }
